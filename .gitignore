@@ -105,3 +105,6 @@ venv.bak/
 
 # test files
 test.py
+
+#embedding outputs
+*.emb
