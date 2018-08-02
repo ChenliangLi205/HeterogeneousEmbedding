@@ -56,4 +56,4 @@ if __name__ == '__main__':
                         walks_per_node=10, walk_length=40)
     learn_embeddings(walks, 'data/'+using+'m2v.emb', dimensions=100, window_size=5,
                      min_count=0, sg=1, iterations=3, alpha=.1, min_alpha=.01, workers=4)
-    print "time consuming: %d" % (time.time()-start) / 60
+    print "time consuming: {}" .format(int(time.time()-start) / 60)
