@@ -50,7 +50,7 @@ if __name__ == '__main__':
     using = datasets[0]
     metapath = {'A': ['P'], 'P': ['A', 'V'], 'V': ['P']}
     start = time.time()
-    graph = nx.read_edgelist('data/'+using+'/graph.edgelist', delimiter=',',
+    graph = nx.read_edgelist('data/'+using+'graph.edgelist', delimiter=',',
                              create_using=nx.Graph(), nodetype=str, data=False)
     walks = random_walk(graph, metapath,
                         walks_per_node=10, walk_length=40)
