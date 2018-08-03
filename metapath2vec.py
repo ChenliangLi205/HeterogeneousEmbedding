@@ -46,7 +46,7 @@ def learn_embeddings(walks, output, dimensions=100, window_size=5, min_count=0, 
 
 
 if __name__ == '__main__':
-    datasets = ['dblp']
+    datasets = ['dblp/']
     using = datasets[0]
     metapath = {'A': ['P'], 'P': ['A', 'V'], 'V': ['P']}
     start = time.time()
