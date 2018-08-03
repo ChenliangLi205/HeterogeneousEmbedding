@@ -42,7 +42,7 @@ def learn_embeddings(walks, output, dimensions=100, window_size=5, min_count=0, 
     model = word2vec.Word2Vec(sentences=walks, size=dimensions,
                               window=window_size, min_count=min_count, sg=sg, workers=workers,
                               iter=iterations, alpha=alpha, min_alpha=min_alpha)
-    model.save_word2vec_format(output)
+    model.wv.save_word2vec_format(output)
 
 
 if __name__ == '__main__':
@@ -56,4 +56,4 @@ if __name__ == '__main__':
                         walks_per_node=10, walk_length=40)
     learn_embeddings(walks, 'data/'+using+'m2v.emb', dimensions=100, window_size=5,
                      min_count=0, sg=1, iterations=3, alpha=.1, min_alpha=.01, workers=4)
-    print "time consuming: {}" .format(int(time.time()-start) / 60)
+    print("time consuming: {}" .format(int(time.time()-start) / 60))
